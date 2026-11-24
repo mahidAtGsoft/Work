@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="udOO9lorZmWjSxZeTNli">
+    <mxGraphModel dx="1585" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1420" pageHeight="840" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tbl_users" parent="1" style="swimlane;fontStyle=1;fontSize=13;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="users" vertex="1">
+          <mxGeometry height="180" width="300" x="60" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="u_1" parent="tbl_users" style="text;fontFamily=Courier New;fontSize=11;fontStyle=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="PK  id : BIGINT (IDENTITY)" vertex="1">
+          <mxGeometry height="30" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_2" parent="tbl_users" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="UQ  email : VARCHAR(255) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="300" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="u_3" parent="tbl_users" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    name : VARCHAR(120) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="300" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="u_4" parent="tbl_users" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    created_at : TIMESTAMPTZ NOT NULL" vertex="1">
+          <mxGeometry height="30" width="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="u_5" parent="tbl_users" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    updated_at : TIMESTAMPTZ NOT NULL" vertex="1">
+          <mxGeometry height="30" width="300" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_members" parent="1" style="swimlane;fontStyle=1;fontSize=13;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;" value="project_members" vertex="1">
+          <mxGeometry height="150" width="300" x="60" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="pm_1" parent="tbl_members" style="text;fontFamily=Courier New;fontSize=11;fontStyle=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="PK,FK project_id : BIGINT (CASCADE)" vertex="1">
+          <mxGeometry height="30" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pm_2" parent="tbl_members" style="text;fontFamily=Courier New;fontSize=11;fontStyle=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="PK,FK user_id : BIGINT (CASCADE)" vertex="1">
+          <mxGeometry height="30" width="300" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pm_3" parent="tbl_members" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="      role : VARCHAR(20) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="300" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pm_4" parent="tbl_members" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="      joined_at : TIMESTAMPTZ NOT NULL" vertex="1">
+          <mxGeometry height="30" width="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_projects" parent="1" style="swimlane;fontStyle=1;fontSize=13;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="projects" vertex="1">
+          <mxGeometry height="240" width="340" x="500" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p_1" parent="tbl_projects" style="text;fontFamily=Courier New;fontSize=11;fontStyle=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="PK  id : BIGINT (IDENTITY)" vertex="1">
+          <mxGeometry height="30" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p_2" parent="tbl_projects" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="FK  owner_id : BIGINT NOT NULL (RESTRICT)" vertex="1">
+          <mxGeometry height="30" width="340" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p_3" parent="tbl_projects" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    name : VARCHAR(150) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="340" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p_4" parent="tbl_projects" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    description : TEXT" vertex="1">
+          <mxGeometry height="30" width="340" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p_5" parent="tbl_projects" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    is_archived : BOOL NOT NULL (FALSE)" vertex="1">
+          <mxGeometry height="30" width="340" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p_6" parent="tbl_projects" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    created_at : TIMESTAMPTZ NOT NULL" vertex="1">
+          <mxGeometry height="30" width="340" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="p_7" parent="tbl_projects" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    updated_at : TIMESTAMPTZ NOT NULL" vertex="1">
+          <mxGeometry height="30" width="340" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_tasks" parent="1" style="swimlane;fontStyle=1;fontSize=13;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=0;fillColor=#e1d5e7;strokeColor=#9673a6;" value="tasks" vertex="1">
+          <mxGeometry height="360" width="340" x="500" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="t_1" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;fontStyle=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="PK  id : BIGINT (IDENTITY)" vertex="1">
+          <mxGeometry height="30" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_2" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="FK  project_id : BIGINT NOT NULL (CASCADE)" vertex="1">
+          <mxGeometry height="30" width="340" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t_3" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="FK  assignee_id : BIGINT NULL (SET NULL)" vertex="1">
+          <mxGeometry height="30" width="340" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="t_4" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    title : VARCHAR(200) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="340" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="t_5" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    description : TEXT" vertex="1">
+          <mxGeometry height="30" width="340" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t_6" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    status : VARCHAR(20) NOT NULL (CHECK)" vertex="1">
+          <mxGeometry height="30" width="340" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="t_7" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    priority : VARCHAR(20) NOT NULL (CHECK)" vertex="1">
+          <mxGeometry height="30" width="340" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="t_8" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    due_date : TIMESTAMPTZ NULL" vertex="1">
+          <mxGeometry height="30" width="340" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="t_9" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    version : INT NOT NULL (DEFAULT 1)" vertex="1">
+          <mxGeometry height="30" width="340" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="t_10" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    created_at : TIMESTAMPTZ NOT NULL" vertex="1">
+          <mxGeometry height="30" width="340" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="t_11" parent="tbl_tasks" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    updated_at : TIMESTAMPTZ NOT NULL" vertex="1">
+          <mxGeometry height="30" width="340" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_audit" parent="1" style="swimlane;fontStyle=1;fontSize=13;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;" value="task_audit_logs" vertex="1">
+          <mxGeometry height="240" width="330" x="980" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="a_1" parent="tbl_audit" style="text;fontFamily=Courier New;fontSize=11;fontStyle=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="PK  id : BIGINT (IDENTITY)" vertex="1">
+          <mxGeometry height="30" width="330" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_2" parent="tbl_audit" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="FK  task_id : BIGINT NULL (SET NULL)" vertex="1">
+          <mxGeometry height="30" width="330" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_3" parent="tbl_audit" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="FK  actor_id : BIGINT NULL (SET NULL)" vertex="1">
+          <mxGeometry height="30" width="330" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="a_4" parent="tbl_audit" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    action : VARCHAR(50) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="330" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="a_5" parent="tbl_audit" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    old_value : JSONB" vertex="1">
+          <mxGeometry height="30" width="330" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="a_6" parent="tbl_audit" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    new_value : JSONB" vertex="1">
+          <mxGeometry height="30" width="330" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="a_7" parent="tbl_audit" style="text;fontFamily=Courier New;fontSize=11;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;html=0;" value="    created_at : TIMESTAMPTZ NOT NULL" vertex="1">
+          <mxGeometry height="30" width="330" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="note_design" parent="1" style="shape=note;whiteSpace=wrap;html=0;backgroundOutline=1;darkOpacity=0.05;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontFamily=Courier New;fontSize=11;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="Schema Constraints &amp; Indexing Notes&#xa;----------------------------------------&#xa;CHECK role: admin, member, viewer&#xa;CHECK status: todo, in_progress, done, cancelled&#xa;CHECK priority: low, medium, high&#xa;&#xa;Optimistic Locking: tasks.version&#xa;  UPDATE ... WHERE id=$1 AND version=$2&#xa;&#xa;Key Index (EXPLAIN target):&#xa;  tasks (project_id, status, created_at DESC)&#xa;  tasks (assignee_id) WHERE assignee_id IS NOT NULL" vertex="1">
+          <mxGeometry height="230" width="330" x="980" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_projects" edge="1" parent="1" source="tbl_users" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;html=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;rounded=0;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.26;entryDx=0;entryDy=0;" target="tbl_projects" value="owns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_members" edge="1" parent="1" source="tbl_users" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;html=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="tbl_members" value="joins">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_project_members" edge="1" parent="1" source="tbl_projects" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;html=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;rounded=0;exitX=0;exitY=0.85;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" target="tbl_members" value="has">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="284" />
+              <mxPoint x="430" y="425" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_project_tasks" edge="1" parent="1" source="tbl_projects" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;html=0;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="tbl_tasks" value="contains">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_tasks" edge="1" parent="1" source="tbl_users" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;html=0;startArrow=ERzeroToOne;endArrow=ERzeroToMany;startFill=0;endFill=0;rounded=0;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tbl_tasks" value="assigned to">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="170" />
+              <mxPoint x="20" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_task_audit" edge="1" parent="1" source="tbl_tasks" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;html=0;startArrow=ERzeroToOne;endArrow=ERzeroToMany;startFill=0;endFill=0;rounded=0;dashed=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.375;entryDx=0;entryDy=0;" target="tbl_audit" value="logged in">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_audit" edge="1" parent="1" source="tbl_users" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;html=0;startArrow=ERzeroToOne;endArrow=ERzeroToMany;startFill=0;endFill=0;rounded=0;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="tbl_audit" value="triggers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="25" />
+              <mxPoint x="1360" y="25" />
+              <mxPoint x="1360" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
